@@ -1,0 +1,104 @@
+:root{
+  --star-grey: #272f39;
+  --btn-checked: #7c8798;
+  --btn: #262e38;
+  --orange:  #FC7614;
+  font-size: 62.5%;
+}
+
+
+p {
+  font-size: 1.5rem;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+.container-fluid {
+    background-color: #141519;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    margin-top: 13rem;
+    border-radius: 2rem;
+}
+
+.star-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    
+    border: 1px solid var(--star-grey);
+    border-radius: 50%;
+    background-color: var(--star-grey);
+
+/*background-image: url("images/icon-star.svg");
+background-repeat: no-repeat;
+background-position: 50% 50%;*/
+
+}
+
+#rating-form{
+    display: flex;
+  justify-content: space-between;
+}
+
+#rating-form  input {
+  -webkit-appearance:none;
+         -moz-appearance:none;
+              appearance:none;
+}
+
+.rating {
+    border-radius: 50%;
+    background-color: var(--btn);
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    color: var(--btn-checked);
+}
+
+.rating:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+  color: white;
+}
+
+.rating:checked{
+    background-color: var(--btn-checked) ;
+    border-color: var(--btn-checked);
+    color: white;
+}
+
+#submit{
+  display: block;
+  width: 100%;
+  margin-top: 2rem; margin-right: auto; margin-left: auto;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 30rem;
+  background-color: var(--orange);
+  border: none;
+  color: white;
+}
+
+#submit:hover{
+  background-color: white;
+  color: var(--orange);
+}
+
+button {
+    font-size: 1.5rem;
+ font-family: inherit;
+ color: #fff;
+ width: 9em;
+ height: 3em;
+ line-height: 2em;
+ text-align: center;
+  border-radius: 30px;
+}
