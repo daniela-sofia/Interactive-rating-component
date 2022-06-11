@@ -1,40 +1,73 @@
 :root{
-	font-size: 62.5%;
   --star-grey: #272f39;
   --btn-checked: #7c8798;
   --btn: #262e38;
   --orange:  #FC7614;
+  font-size: 62.5%;
+  --font-grey: #BEC3CC;
+  
 }
 
-
-.container {
-  background-color: white;
+p, span, h3, #submit {
+   font-family: 'Overpass', sans-serif;
 }
 
-body{
-  background-color: #141519;
-}
-
-p {
+p, span {
   font-size: 1.5rem;
+  color: var(--font-grey);
 }
 
-span {
-  font-size: 1.5rem;
+h3  {
+    color: white;
+    font-weight: 700;
+}
+
+.container-fluid {
+    background-color: #141519;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    margin-top: 13rem;
+    border-radius: 2rem;
+    background: rgb(34,41,51);
+    background: rgb(23,30,40);
+    background: -moz-linear-gradient(0deg, rgba(23,30,40,1) 0%, rgba(34,41,51,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(23,30,40,1) 0%, rgba(34,41,51,1) 100%);
+    background: linear-gradient(0deg, rgba(23,30,40,1) 0%, rgba(34,41,51,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171e28",endColorstr="#222933",GradientType=1);
+
+}
+
+
+#rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .star-icon {
-  width: 40px;
-  height: 40px;
-  
-  border: 1px solid var(--star-grey);
-  border-radius: 50%;
-  background-color: var(--star-grey);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    
+    border: 1px solid var(--btn);
+    border-radius: 50%;
+    background-color: var(--btn);
+
+/*background-image: url("images/icon-star.svg");
+background-repeat: no-repeat;
+background-position: 50% 50%;*/
 
 }
 
 #rating-form{
-	display: flex;
+    display: flex;
   justify-content: space-between;
 }
 
@@ -54,12 +87,12 @@ span {
 }
 
 .rating:hover {
-	background-color: var(--orange);
-	border-color: var(--orange);
+    background-color: var(--orange);
+    border-color: var(--orange);
   color: white;
 }
 
-.rating:checked{
+#rating-form input[type="radio"]:checked + .rating{
     background-color: var(--btn-checked) ;
     border-color: var(--btn-checked);
     color: white;
@@ -68,7 +101,7 @@ span {
 #submit{
   display: block;
   width: 100%;
-  margin: 2rem auto;
+  margin-top: 2rem; margin-right: auto; margin-left: auto;
   line-height: 2.5rem;
   font-size: 1.5rem;
   border-radius: 30rem;
@@ -80,4 +113,36 @@ span {
 #submit:hover{
   background-color: white;
   color: var(--orange);
+}
+
+button {
+    font-size: 1.5rem;
+ font-family: inherit;
+ color: #fff;
+ width: 9em;
+ height: 3em;
+ line-height: 2em;
+ text-align: center;
+  border-radius: 30px;
+}
+
+#thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#result {
+    display: block;
+    color: var(--orange);
+    background-color: var(--btn);
+    border-radius: 30rem;
+    padding: 0 1.5rem;
+    margin: 2rem 0;
+}
+
+#answer {
+    color: var(--orange);
 }
